@@ -1,6 +1,6 @@
 import { prisma } from ".prisma/client";
 import axios from "axios";
-import prismaClient from "../prisma"
+import prismaClient from "../prisma";
 import { sign } from "jsonwebtoken";
 
 /**
@@ -12,8 +12,6 @@ import { sign } from "jsonwebtoken";
  * ---- NAO = Cria no DB, gera um token
  * Retornar o token com as infos do user
  */
-
-// video parado em 1:11:35
 
 interface IAccessTokenResponse {
     access_token: string;
@@ -84,7 +82,7 @@ class AuthenticateUserService {
             }
         );
 
-        return { token , response };
+        return { token , user };
 
     }
 }
